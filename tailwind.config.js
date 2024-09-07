@@ -2,7 +2,12 @@
 module.exports = {
   content: ["./src/**/*.{jsx,tsx,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        nunito: ["var(--font-nunito)"],
+        poppins: ["var(--font-poppins)"],
+      },
+    },
   },
   plugins: [],
 };
