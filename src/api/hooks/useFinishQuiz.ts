@@ -1,10 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 import apiConfig from "../../config/apiConfig";
 import axiosInstance from "../axios";
-
-interface IFinishQuizMutationObject {
-  quizId: string | number;
-}
+import { IFinishQuizMutationObject } from "../../interface/api";
 
 const finishQuiz = async (postData: IFinishQuizMutationObject) => {
   const apiEndpoint = `${apiConfig.urls.quiz + postData.quizId}/finish`;
