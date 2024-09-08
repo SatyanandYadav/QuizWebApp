@@ -15,16 +15,16 @@ function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <QuizContextProvider>
-        <BrowserRouter>
+      <BrowserRouter>
+        <QuizContextProvider>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/question" element={<Question />} />
             <Route path="/result" element={<Result />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
-        </BrowserRouter>
-      </QuizContextProvider>
+        </QuizContextProvider>
+      </BrowserRouter>
     </QueryClientProvider>
   );
 }

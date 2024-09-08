@@ -1,12 +1,27 @@
+import { useContext } from "react";
 import companyLogo from "../../assets/icons/companyLogo.svg";
 import StartButton from "../../components/StartButton";
 import { useNavigate } from "react-router-dom";
+import { QuizContext } from "../../assets/context/QuizContext";
+import useCreateQuiz from "../../api/hooks/useCreateQuiz";
+import { UserData } from "../../constants/common";
 
 const Home = () => {
   const navigate = useNavigate();
+  const { setQuizId } = useContext(QuizContext);
+  const { mutate } = useCreateQuiz();
 
   const handleStartButtonClick = () => {
-    navigate("/question");
+    mutate(UserData, {
+      onSuccess: (response) => {
+        console.log(response.data);
+        if (response.data.quizId) setQuizId(response.data.quizId);
+        navigate("/question");
+      },
+      onError: (error) => {
+        console.error("Oops, something went wrong. Please try again.", error);
+      },
+    });
   };
   return (
     <div className="h-screen w-screen bg-gradient-to-b from-white to-[#AF9CF3] flex flex-col justify-between">
