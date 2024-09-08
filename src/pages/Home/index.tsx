@@ -14,7 +14,6 @@ const Home = () => {
   const handleStartButtonClick = () => {
     mutate(UserData, {
       onSuccess: (response) => {
-        console.log(response.data);
         if (response.data.quizId) setQuizId(response.data.quizId);
         navigate("/question");
       },

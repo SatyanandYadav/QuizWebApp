@@ -46,7 +46,9 @@ const Question = () => {
           {
             questionId: `${activeQuestionData?.id}`,
             userAnswerId: selectedValues,
-            correct: !!(activeQuestionData?.answer === selectedValues[0]),
+            correct: !!(
+              Number(activeQuestionData?.answer) === Number(selectedValues[0])
+            ),
             timeSpent: `${timeSpent}s`,
           },
         ]);
@@ -74,7 +76,6 @@ const Question = () => {
         }
         setSelectedValues([]);
         setTimeSpent(0);
-        console.log(response.data);
       },
       onError: (error) => {
         console.error("Oops, something went wrong. Please try again.", error);
