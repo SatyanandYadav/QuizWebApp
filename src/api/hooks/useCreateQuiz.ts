@@ -1,10 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 import apiConfig from "../../config/apiConfig";
 import axiosInstance from "../axios";
-
-interface IQuizMutationObject {
-  userId: string;
-}
+import { IQuizMutationObject } from "../../interface/api";
 
 const createQuiz = async (postData: IQuizMutationObject) => {
   const apiEndpoint = `${apiConfig.urls.quiz}start`;

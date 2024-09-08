@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import questionbackground from "../../assets/backgroundImage/questionBackground.svg";
 import Button from "../../components/Button";
 import QuestionCard from "../../components/QuestionCard";
-import { QuizContext } from "../../assets/context/QuizContext";
+import { QuizContext } from "../../context/QuizContext";
 import useGetQuizQuestions from "../../api/hooks/useGetQuizQuestions";
 import useSubmitQuizAnswer from "../../api/hooks/useSubmitQuizAnswer";
 import useFinishQuiz from "../../api/hooks/useFinishQuiz";

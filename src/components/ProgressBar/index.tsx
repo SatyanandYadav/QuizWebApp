@@ -1,7 +1,4 @@
-interface IprogressBar {
-  currentValue: number | string;
-  total: number | string;
-}
+import { IprogressBar } from "../../interface";
 
 const ProgressBar = ({ currentValue, total }: IprogressBar) => {
   const progressPercentage = (Number(currentValue) / Number(total)) * 100;

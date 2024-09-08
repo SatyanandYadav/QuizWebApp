@@ -1,16 +1,6 @@
-import { IQuestion } from "../../interface";
+import { IQuestionCardData } from "../../interface";
 import ProgressBar from "../ProgressBar";
 import QuestionOption from "../QuestionOption";
-
-interface IQuestionCardData {
-  questionData: IQuestion | undefined;
-  currentValue: number;
-  totalQuestionLength: number;
-  handleOptionChange: (id: string, checked: boolean) => void;
-}
-
-const imageUrl =
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmtVNegGLnKdVRcAm_9vG7Xw9lhJ5xkvBWpg&s";
 
 const QuestionCard = ({
   questionData,

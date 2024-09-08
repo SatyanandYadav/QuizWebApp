@@ -1,11 +1,5 @@
 import rightArrow from "../../assets/icons/rightArrow.svg";
-
-interface IButton {
-  label: string;
-  onClick: Function;
-  isArrowIcon?: Boolean;
-  disabled?: boolean;
-}
+import { IButton } from "../../interface";
 
 const Button = ({
   label,

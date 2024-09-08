@@ -1,11 +1,6 @@
 import uncheckedIcon from "../../assets/icons/uncheckedIcon.svg";
 import checkedIcon from "../../assets/icons/checkedIcon.svg";
-import { IOption } from "../../interface";
-
-interface IQuestionOption {
-  optionData: IOption;
-  handleOptionChange: (id: string, checked: boolean) => void;
-}
+import { IQuestionOption } from "../../interface";
 
 const QuestionOption = ({
   optionData,

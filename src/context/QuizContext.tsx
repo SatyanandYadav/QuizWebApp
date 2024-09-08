@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { IQuizContext, IReportResult } from "../../interface/context";
+import { IQuizContext, IReportResult } from "../interface/context";
 
 export const QuizContext = createContext({} as IQuizContext);
 

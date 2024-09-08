@@ -1,7 +1,4 @@
-interface IStartButton {
-  label: string;
-  handleClick: Function;
-}
+import { IStartButton } from "../../interface";
 
 const StartButton = ({ label, handleClick }: IStartButton) => {
   return (

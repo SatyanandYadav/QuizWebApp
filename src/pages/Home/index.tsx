@@ -2,7 +2,7 @@ import { useContext } from "react";
 import companyLogo from "../../assets/icons/companyLogo.svg";
 import StartButton from "../../components/StartButton";
 import { useNavigate } from "react-router-dom";
-import { QuizContext } from "../../assets/context/QuizContext";
+import { QuizContext } from "../../context/QuizContext";
 import useCreateQuiz from "../../api/hooks/useCreateQuiz";
 import { UserData } from "../../constants/common";
 

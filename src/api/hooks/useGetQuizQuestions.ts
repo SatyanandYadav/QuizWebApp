@@ -3,12 +3,7 @@ import { queryKeys } from "../constants";
 import axiosInstance from "../axios";
 import apiConfig from "../../config/apiConfig";
 import { IQuestion } from "../../interface";
-
-interface IGetQuizQuestionsResponse {
-  quizId: string;
-  userId: string;
-  questions: IQuestion[];
-}
+import { IGetQuizQuestionsResponse } from "../../interface/api";
 
 const getQuizQuestions = async (quizId: string | number) => {
   if (!quizId) {
