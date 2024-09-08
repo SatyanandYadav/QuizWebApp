@@ -1,6 +1,6 @@
 export interface IReportResult {
     questionId: string | number;
-    userAnswerId: string | number;
+    userAnswerId: (string | number)[];
     correct: boolean;
   }
   

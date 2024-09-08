@@ -2,6 +2,13 @@ import { useQuery } from "@tanstack/react-query";
 import { queryKeys } from "../constants";
 import axiosInstance from "../axios";
 import apiConfig from "../../config/apiConfig";
+import { IQuestion } from "../../interface";
+
+interface IGetQuizQuestionsResponse {
+  quizId: string;
+  userId: string;
+  questions: IQuestion[];
+}
 
 const getQuizQuestions = async (quizId: string | number) => {
   if (!quizId) {
@@ -15,7 +22,7 @@ const getQuizQuestions = async (quizId: string | number) => {
 };
 
 const useGetQuizQuestions = ({ quizId }: { quizId: string | number }) => {
-  const response = useQuery({
+  const response = useQuery<IGetQuizQuestionsResponse>({
     queryKey: [queryKeys.quizQuestions],
     queryFn: () => getQuizQuestions(quizId),
     enabled: !!quizId,

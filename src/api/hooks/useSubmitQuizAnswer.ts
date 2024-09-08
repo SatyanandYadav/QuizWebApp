@@ -5,7 +5,8 @@ import axiosInstance from "../axios";
 interface ISubmitQuizAnswerMutationObject {
   quizId: string | number;
   questionId: string | number;
-  answerId: string | number;
+  answerId: (string | number)[];
+  timeSpent: string;
 }
 
 const submitQuizAnswer = async (postData: ISubmitQuizAnswerMutationObject) => {
